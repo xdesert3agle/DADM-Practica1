@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.dadm.miguelangelvicentebaeza.practica1.Pregunta1"
+    tools:ignore="ExtraText">
+
+    <RelativeLayout
+        android:id="@+id/persona"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_below="@+id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contProgreso"
+        android:layout_below="@+id/persona"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/txtPaso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paso 1"
+            android:textSize="18dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_below="@+id/txtPaso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:progress="10"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contPregunta"
+        android:layout_below="@+id/contProgreso"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/txtEnunciado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. ¿Cuál fue la primera versión de Android en traer un nombre de postre?"
+            android:textSize="18dp"/>
+
+        <RadioGroup
+            android:id="@+id/respuestas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEnunciado">
+
+            <RadioButton
+                android:id="@+id/respuesta1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Almond"
+                android:textSize="18dp"/>
+
+            <RadioButton
+                android:id="@+id/respuesta2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cupcake"
+                android:textSize="18dp"/>
+
+            <RadioButton
+                android:id="@+id/respuesta3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brownie"
+                android:textSize="18dp"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contPregunta"
+        android:layout_centerHorizontal="true"
+        android:text="Siguiente pregunta"/>
+
+</RelativeLayout>

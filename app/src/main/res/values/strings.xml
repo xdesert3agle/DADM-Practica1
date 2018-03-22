@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Android Quiz</string>
+    <string name="welcome_msg">¡Bienvenido al test de Android! Escribe tu nombre para comenzar.</string>
+    <string name="btn_start_value">Confirmar nombre</string>
+    <string name="txt_name_content">Nombre</string>
+
+    <string-array name="opcionesPregunta3">
+        <item>Samsung Galaxy</item>
+        <item>Nexus One</item>
+        <item>HTC Dream</item>
+    </string-array>
+</resources>
