@@ -19,7 +19,7 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_centerHorizontal="true"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:id="@+id/username"
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -43,7 +43,7 @@
             android:id="@+id/txtPaso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Paso 2"
+            android:text="@string/txt_Step2"
             android:textSize="18dp"/>
 
         <ProgressBar
@@ -69,14 +69,15 @@
             android:id="@+id/txtEnunciado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2. ¿En qué año se hizo Google con Android Inc.?"
+            android:text="@string/txt_Question2"
             android:textSize="18dp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/respuesta"
-            android:layout_below="@+id/txtEnunciado"/>
+            android:layout_below="@+id/txtEnunciado"
+            android:hint="@string/edit_AnswerHint"/>
 
     </RelativeLayout>
 
@@ -86,6 +87,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/contPregunta"
         android:layout_centerHorizontal="true"
-        android:text="Siguiente pregunta"/>
+        android:text="@string/btn_NextQuestion"/>
 
 </RelativeLayout>

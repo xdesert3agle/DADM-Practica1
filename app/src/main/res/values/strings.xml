@@ -1,12 +1,76 @@
 <resources>
     <string name="app_name">Android Quiz</string>
-    <string name="welcome_msg">¡Bienvenido al test de Android! Escribe tu nombre para comenzar.</string>
-    <string name="btn_start_value">Confirmar nombre</string>
-    <string name="txt_name_content">Nombre</string>
 
-    <string-array name="opcionesPregunta3">
+    <string name="btn_ConfirmName">Confirmar nombre</string>
+    <string name="btn_NextQuestion">Siguiente pregunta</string>
+
+    <string name="edit_NameHint">Nombre</string>
+    <string name="edit_AnswerHint">Respuesta</string>
+
+    <string name="txt_Welcome">¡Bienvenido al test de Android! Escribe tu nombre para comenzar.</string>
+    <string name="txt_Step1">Paso 1</string>
+    <string name="txt_Step2">Paso 2</string>
+    <string name="txt_Step3">Paso 3</string>
+    <string name="txt_Step4">Paso 4</string>
+    <string name="txt_Step5">Paso 5</string>
+    <string name="txt_Step6">Paso 6</string>
+    <string name="txt_Step7">Paso 7</string>
+    <string name="txt_Step8">Paso 8</string>
+    <string name="txt_Step9">Paso 9</string>
+    <string name="txt_Step10">Paso 10</string>
+
+    <string name="txt_Question1">1. ¿Cuál fue la primera versión de Android en traer un nombre de postre?</string>
+    <string name="radio_q1o1">Almond</string>
+    <string name="radio_q1o2">Cupcake</string>
+    <string name="radio_q1o3">Brownie</string>
+
+    <string name="txt_Question2">2. ¿En qué año se hizo Google con Android Inc.?</string>
+
+    <string name="txt_Question3">3. ¿Cuál fue el primer smartphone en comercializarse con Android?</string>
+    <string-array name="question3_options">
         <item>Samsung Galaxy</item>
         <item>Nexus One</item>
         <item>HTC Dream</item>
     </string-array>
+
+    <string name="txt_Question4">4. ¿Cuál de estas compañías no ha fabricado Nexus?</string>
+    <string-array name="question4_options">
+        <item>Samsung</item>
+        <item>HTC</item>
+        <item>Sony</item>
+    </string-array>
+
+    <string name="txt_Question5">5. ¿Cómo se llama la versión de Android para wearables?</string>
+    <string-array name="question5_options">
+        <item>Android Watch</item>
+        <item>Android Wearable</item>
+        <item>Android Wear</item>
+        <item>Android Clock</item>
+    </string-array>
+
+    <string name="txt_Question6">6. ¿Cuál de los siguientes nombres NO son versiones de Android?</string>
+    <string name="check_q6o1">Marshmallow</string>
+    <string name="check_q6o2">Chupachup</string>
+    <string name="check_q6o3">Froyo</string>
+    <string name="check_q6o4">Lime Cake</string>
+    <string name="check_q6o5">Gingerbread</string>
+
+    <string name="txt_Question7">7. ¿Cuántos teléfonos se han lanzado de la gama Nexus?</string>
+
+    <string name="txt_Question8">8. ¿Qué nombre tenía la versión 4.0 de Android?</string>
+    <string-array name="question8_options">
+        <item>Mashmallow</item>
+        <item>Lollipop</item>
+        <item>Froyo</item>
+        <item>Lime Cake</item>
+        <item>Gingerbread</item>
+        <item>Ice Cream Sandwich</item>
+        <item>Chocolate Cake</item>
+    </string-array>
+
+    <string name="txt_Question9">9. La marca de coches Hyundai ha ofrecido un modelo con Android Auto, ¿verdadero o falso?</string>
+
+    <string name="txt_Question10">10. ¿En qué año se comercializó el primer smartphone con Android?</string>
 </resources>
+
+

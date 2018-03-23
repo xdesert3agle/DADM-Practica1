@@ -19,7 +19,7 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_centerHorizontal="true"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:id="@+id/username"
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -43,7 +43,7 @@
             android:id="@+id/txtPaso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Paso 3"
+            android:text="@string/txt_Step3"
             android:textSize="18dp"/>
 
         <ProgressBar
@@ -69,7 +69,7 @@
             android:id="@+id/txtEnunciado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3. ¿Cuál fue el primer smartphone en comercializarse con Android?"
+            android:text="@string/txt_Question3"
             android:textSize="18dp"/>
 
         <Spinner
@@ -78,8 +78,7 @@
             android:id="@+id/respuesta"
             android:layout_below="@+id/txtEnunciado"
             android:layout_margin="8dp"
-            android:entries="@array/opcionesPregunta3" />
-
+            android:entries="@array/question3_options"/>
     </RelativeLayout>
 
     <Button
@@ -88,6 +87,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/contPregunta"
         android:layout_centerHorizontal="true"
-        android:text="Siguiente pregunta"/>
+        android:text="@string/btn_NextQuestion"/>
 
 </RelativeLayout>
