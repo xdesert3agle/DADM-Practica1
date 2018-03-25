@@ -12,18 +12,18 @@
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"
         android:textAlignment="center"
         android:textSize="18sp"
         android:text="@string/txt_Welcome"/>
 
     <EditText
         android:layout_below="@id/welcome_msg"
+        android:layout_margin="16dp"
         android:id="@+id/txt_name"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/edit_NameHint"/>
@@ -32,15 +32,22 @@
         android:id="@+id/img_android"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/txt_name"
-        android:layout_width="262dp"
+        android:layout_width="220dp"
         android:layout_height="220dp"
         app:srcCompat="@drawable/androidlogo"/>
 
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/img_android"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/contButtons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_ConfirmName"/>
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btn_Start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_ConfirmName"/>
+    </LinearLayout>
 </RelativeLayout>

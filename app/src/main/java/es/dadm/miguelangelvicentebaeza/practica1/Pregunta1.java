@@ -3,10 +3,8 @@ package es.dadm.miguelangelvicentebaeza.practica1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -21,16 +19,16 @@ public class Pregunta1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta1);
 
-        // Recuperamos el array enviado en la pantalla principal, y ponemos el nombre del usuario de bajo del avatar.
+        // Recuperamos el array enviado en la pantalla principal, y ponemos el nombre del usuario debajo del avatar en pantalla.
         final List<String> info = getIntent().getExtras().getStringArrayList("info");
-        TextView avatar_username = (TextView) findViewById(R.id.username);
-        avatar_username.setText(info.get(0));
+        TextView txt_Username = (TextView) findViewById(R.id.username);
+        txt_Username.setText(info.get(0));
 
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.respuestas);
         radioGroup.check(R.id.respuesta1); // El primer radioButton viene checkeado por defecto para evitar que se deje en blanco.
 
-        Button btnSiguiente = (Button) findViewById(R.id.btnNext);
-        btnSiguiente.setOnClickListener(new View.OnClickListener() {
+        Button btn_Next = (Button) findViewById(R.id.btn_Next);
+        btn_Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 RadioButton elegida = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());

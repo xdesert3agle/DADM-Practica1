@@ -2,7 +2,8 @@
     <string name="app_name">Android Quiz</string>
 
     <string name="btn_ConfirmName">Confirmar nombre</string>
-    <string name="btn_NextQuestion">Siguiente pregunta</string>
+    <string name="btn_NextQuestion">Siguiente</string>
+    <string name="btn_PrevQuestion">Anterior</string>
 
     <string name="edit_NameHint">Nombre</string>
     <string name="edit_AnswerHint">Respuesta</string>

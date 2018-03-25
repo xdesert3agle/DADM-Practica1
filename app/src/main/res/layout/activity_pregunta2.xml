@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,40 +8,34 @@
 
     <RelativeLayout
         android:id="@+id/persona"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_margin="16dp">
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
 
         <ImageView
             android:id="@+id/avatar"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
             android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:id="@+id/username"
             android:layout_below="@+id/avatar"
-            android:layout_width="match_parent"
+            android:layout_width="96dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:textAlignment="center"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/contProgreso"
-        android:layout_below="@+id/persona"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp">
+            android:text="Miguel Ángel"/>
 
         <TextView
             android:id="@+id/txtPaso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/avatar"
             android:text="@string/txt_Step2"
             android:textSize="18dp"/>
 
@@ -60,33 +53,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/contPregunta"
-        android:layout_below="@+id/contProgreso"
+        android:layout_below="@+id/persona"
+        android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginRight="16dp">
 
         <TextView
             android:id="@+id/txtEnunciado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/contPregunta"
+            android:layout_below="@+id/contPregunta"
             android:text="@string/txt_Question2"
-            android:textSize="18dp"/>
+            android:textSize="18dp" />
 
         <EditText
+            android:id="@+id/respuesta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/respuesta"
             android:layout_below="@+id/txtEnunciado"
-            android:hint="@string/edit_AnswerHint"/>
-
+            android:hint="@string/edit_AnswerHint"
+            android:inputType="number"/>
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/contButtons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/contPregunta"
-        android:layout_centerHorizontal="true"
-        android:text="@string/btn_NextQuestion"/>
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
 
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_PrevQuestion"/>
+
+        <Button
+            android:id="@+id/btn_Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_NextQuestion"/>
+    </LinearLayout>
 </RelativeLayout>

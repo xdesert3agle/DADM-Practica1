@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
             info.add("");
         }
 
-        Button btn_start = (Button) findViewById(R.id.btn_start);
-        btn_start.setOnClickListener(new View.OnClickListener() {
+        Button btn_Start = (Button) findViewById(R.id.btn_Start);
+        btn_Start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (txt_name.getText().toString().equals("")){

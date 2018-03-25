@@ -3,7 +3,6 @@ package es.dadm.miguelangelvicentebaeza.practica1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,12 +12,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pregunta3 extends AppCompatActivity {
+public class Pregunta4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pregunta3);
+        setContentView(R.layout.activity_pregunta4);
 
         // Recuperamos el array enviado en la pantalla principal, y ponemos el nombre del usuario debajo del avatar.
         final List<String> info = getIntent().getExtras().getStringArrayList("info");
@@ -30,12 +29,12 @@ public class Pregunta3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText respuesta = (EditText) findViewById(R.id.respuesta);
-                info.set(3, respuesta.getText().toString());
-
-                Intent intent = new Intent(Pregunta3.this, Pregunta4.class);
+                info.set(4, respuesta.getText().toString());
+                //Toast.makeText(Pregunta4.this, info.get(4), Toast.LENGTH_SHORT).show();
+                /*Intent intent = new Intent(Pregunta3.this, Pregunta4.class);
                 intent.putExtra("info", (ArrayList<String>) info);
-                Log.d("Pruebitajoder", "SI que llega");
-                startActivity(intent);
+
+                startActivity(intent);*/
             }
         });
 

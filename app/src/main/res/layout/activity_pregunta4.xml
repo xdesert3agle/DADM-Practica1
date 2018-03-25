@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="es.dadm.miguelangelvicentebaeza.practica1.Pregunta1"
+    tools:context="es.dadm.miguelangelvicentebaeza.practica1.Pregunta4"
     tools:ignore="ExtraText">
 
     <RelativeLayout
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/avatar"
-            android:text="@string/txt_Step1"
+            android:text="@string/txt_Step4"
             android:textSize="18dp"/>
 
         <ProgressBar
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             style="@android:style/Widget.Holo.ProgressBar.Horizontal"
             android:progressBackgroundTint="@color/colorPrimaryDark"
-            android:progress="10"/>
+            android:progress="30"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -62,39 +62,18 @@
             android:id="@+id/txtEnunciado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txt_Question1"
+            android:text="@string/txt_Question4"
             android:textSize="18dp"/>
 
-        <RadioGroup
-            android:id="@+id/respuestas"
+        <Spinner
+            android:id="@+id/respuesta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtEnunciado"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp">
-
-            <RadioButton
-                android:id="@+id/respuesta1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/radio_q1o1"
-                android:textSize="18dp"/>
-
-            <RadioButton
-                android:id="@+id/respuesta2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/radio_q1o2"
-                android:textSize="18dp"/>
-
-            <RadioButton
-                android:id="@+id/respuesta3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/radio_q1o3"
-                android:textSize="18dp"/>
-        </RadioGroup>
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:entries="@array/question4_options"
+            android:spinnerMode="dropdown"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -103,6 +82,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_PrevQuestion"/>
 
         <Button
             android:id="@+id/btn_Next"
