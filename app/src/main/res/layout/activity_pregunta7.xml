@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.dadm.miguelangelvicentebaeza.practica1.Pregunta7"
+    tools:ignore="ExtraText">
+
+    <RelativeLayout
+        android:id="@+id/persona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_below="@+id/avatar"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAlignment="center"
+            android:text="Miguel Ángel"/>
+
+        <TextView
+            android:id="@+id/txtPaso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avatar"
+            android:text="@string/txt_Step7"
+            android:textSize="18dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_below="@+id/txtPaso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:progress="70"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contPregunta"
+        android:layout_below="@+id/persona"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/txtEnunciado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_Question7"
+            android:textSize="18dp"/>
+        <SeekBar
+            android:id="@+id/barra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtEnunciado"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:id="@+id/minimo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/barra"
+            android:paddingLeft="11dp"
+            android:textSize="18dp"
+            android:text="0"/>
+        <TextView
+            android:id="@+id/estadoActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/barra"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:text="1"/>
+        <TextView
+            android:id="@+id/maximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/barra"
+            android:paddingRight="6dp"
+            android:layout_alignParentRight="true"
+            android:textSize="18dp"
+            android:text="10"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/contButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_PrevQuestion"/>
+
+        <Button
+            android:id="@+id/btn_Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_NextQuestion"/>
+    </LinearLayout>
+</RelativeLayout>

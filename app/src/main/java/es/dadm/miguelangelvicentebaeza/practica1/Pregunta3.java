@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +21,7 @@ public class Pregunta3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta3);
 
-        // Recuperamos el array enviado en la pantalla principal, y ponemos el nombre del usuario debajo del avatar.
+        // Recuperación del array de la pantalla anterior
         final List<String> info = getIntent().getExtras().getStringArrayList("info");
         TextView txt_Username = (TextView) findViewById(R.id.username);
         txt_Username.setText(info.get(0));
@@ -29,12 +30,14 @@ public class Pregunta3 extends AppCompatActivity {
         btn_Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText respuesta = (EditText) findViewById(R.id.respuesta);
-                info.set(3, respuesta.getText().toString());
+                Spinner respuestas = (Spinner) findViewById(R.id.respuestas);
+                String respuesta = respuestas.getSelectedItem().toString();
+
+                info.set(3, respuesta);
 
                 Intent intent = new Intent(Pregunta3.this, Pregunta4.class);
                 intent.putExtra("info", (ArrayList<String>) info);
-                Log.d("Pruebitajoder", "SI que llega");
+
                 startActivity(intent);
             }
         });

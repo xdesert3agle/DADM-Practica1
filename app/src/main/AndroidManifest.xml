@@ -19,7 +19,14 @@
         <activity android:name=".Pregunta1" />
         <activity android:name=".Pregunta2" />
         <activity android:name=".Pregunta3" />
-        <activity android:name=".Pregunta4"></activity>
+        <activity android:name=".Pregunta4" />
+        <activity android:name=".Pregunta5" />
+        <activity android:name=".Pregunta6" />
+        <activity android:name=".Pregunta7" />
+        <activity android:name=".Pregunta8" />
+        <activity android:name=".Pregunta9" />
+        <activity android:name=".Pregunta10" />
+        <activity android:name=".Resultado"></activity>
     </application>
 
 </manifest>

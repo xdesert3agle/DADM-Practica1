@@ -12,8 +12,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import static es.dadm.miguelangelvicentebaeza.practica1.Util.*;
-
 public class Pregunta2 extends AppCompatActivity {
 
     @Override
@@ -32,8 +30,8 @@ public class Pregunta2 extends AppCompatActivity {
             public void onClick(View view) {
                 EditText respuesta = (EditText) findViewById(R.id.respuesta);
 
-                if (!isNumber(respuesta.getText().toString()) || respuesta.getText().toString().length() != 4){
-                    Toast.makeText(Pregunta2.this, "Sólo se pueden introducir números como respuesta.", Toast.LENGTH_SHORT).show();
+                if (respuesta.getText().toString().length() != 4){
+                    Toast.makeText(Pregunta2.this, "Introduce una respuesta de 4 dígitos.", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     info.set(2, respuesta.getText().toString());
