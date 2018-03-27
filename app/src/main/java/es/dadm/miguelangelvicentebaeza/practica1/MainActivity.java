@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         /* Instanciamos e inicializamos un array con 11 posiciones; una para el nombre del usuario, y las demás para los enunciados
         de las respuestas elegidas por el usuario. Así si el usuario responde una respuesta y elige retroceder a la anterior, con array.set
          podemos evitar que se guarde dos veces la respuesta a una pregunta en el mismo índice del array. */
-        final List<String> info = new ArrayList<>();
+        final List<String> respuestas = new ArrayList<>();
         for (int i = 0; i < 12; i++){
-            info.add("");
+            respuestas.add("");
         }
 
         Button btn_Start = (Button) findViewById(R.id.btn_Start);
@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Por favor, introduce tu nombre.", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    info.set(0, txt_name.getText().toString());
+                    respuestas.set(0, txt_name.getText().toString());
                     Intent intent = new Intent(MainActivity.this, Pregunta1.class);
-                    intent.putExtra("info", (ArrayList<String>) info);
+                    intent.putExtra("info", (ArrayList<String>) respuestas);
                     startActivity(intent);
                 }
             }

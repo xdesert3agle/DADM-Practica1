@@ -20,9 +20,9 @@ public class Pregunta1 extends AppCompatActivity {
         setContentView(R.layout.activity_pregunta1);
 
         // Recuperamos el array enviado en la pantalla principal, y ponemos el nombre del usuario debajo del avatar en pantalla.
-        final List<String> info = getIntent().getExtras().getStringArrayList("info");
+        final List<String> respuestas = getIntent().getExtras().getStringArrayList("info");
         TextView txt_Username = (TextView) findViewById(R.id.username);
-        txt_Username.setText(info.get(0));
+        txt_Username.setText(respuestas.get(0));
 
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.respuestas);
         radioGroup.check(R.id.respuesta1); // El primer radioButton viene checkeado por defecto para evitar que se deje en blanco.
@@ -33,10 +33,10 @@ public class Pregunta1 extends AppCompatActivity {
             public void onClick(View view) {
                 RadioButton elegida = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
 
-                info.set(1, elegida.getText().toString());
+                respuestas.set(1, elegida.getText().toString());
 
                 Intent intent = new Intent(Pregunta1.this, Pregunta2.class);
-                intent.putExtra("info", (ArrayList<String>) info);
+                intent.putExtra("info", (ArrayList<String>) respuestas);
 
                 startActivity(intent);
             }

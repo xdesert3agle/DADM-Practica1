@@ -26,9 +26,9 @@ public class Pregunta7 extends AppCompatActivity {
         setContentView(R.layout.activity_pregunta7);
 
         // Recuperación del array de la pantalla anterior
-        final List<String> info = getIntent().getExtras().getStringArrayList("info");
+        final List<String> respuestas = getIntent().getExtras().getStringArrayList("info");
         TextView txt_Username = (TextView) findViewById(R.id.username);
-        txt_Username.setText(info.get(0));
+        txt_Username.setText(respuestas.get(0));
 
         SeekBar barra = (SeekBar) findViewById(R.id.barra);
         final int max = 10, min = 0, step = 1;
@@ -64,10 +64,10 @@ public class Pregunta7 extends AppCompatActivity {
         btn_Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                info.set(7, actual.getText().toString());
+                respuestas.set(7, actual.getText().toString());
 
                 Intent intent = new Intent(Pregunta7.this, Pregunta8.class);
-                intent.putExtra("info", (ArrayList<String>) info);
+                intent.putExtra("info", (ArrayList<String>) respuestas);
 
                 startActivity(intent);
             }

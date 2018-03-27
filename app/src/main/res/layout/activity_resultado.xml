@@ -1,9 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="es.dadm.miguelangelvicentebaeza.practica1.Resultado">
+    tools:context="es.dadm.miguelangelvicentebaeza.practica1.Pregunta9"
+    tools:ignore="ExtraText">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/txt_FinalMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textAlignment="center"
+        android:text="@string/txt_FinalMsg"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/txt_YourResultIs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_FinalMsg"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textAlignment="center"
+        android:text="@string/txt_YourResultIs"
+        android:textSize="18dp"/>
+
+    <LinearLayout
+        android:id="@+id/txt_Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_YourResultIs"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/txt_CorrectQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_CorrectQuestions"
+            android:textSize="52dp"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/txt_TotalQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/txt_TotalQuestions"
+            android:textSize="52dp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <RelativeLayout
+            android:id="@+id/contCorrects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_CorrectsH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="13dp"
+                android:textAlignment="center"
+                android:text="@string/txt_CorrectHPlaceholder"
+                android:textStyle="bold"
+                android:textColor="@color/material_green"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/txt_Corrects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_CorrectsH"
+                android:text="@string/txt_CorrectsPlaceholder"
+                android:textColor="@color/material_green"
+                android:layout_centerHorizontal="true"
+                android:textSize="16dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contIncorrects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_IncorrectsH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/txt_IncorrectHPlaceholder"
+                android:textAlignment="center"
+                android:textColor="@color/material_red"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_Incorrects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_IncorrectsH"
+                android:layout_centerHorizontal="true"
+                android:text="@string/txt_IncorrectsPlaceholder"
+                android:textAlignment="center"
+                android:textColor="@color/material_red"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btn_StartAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_StartAgain"/>
+    </LinearLayout>
+</RelativeLayout>
+

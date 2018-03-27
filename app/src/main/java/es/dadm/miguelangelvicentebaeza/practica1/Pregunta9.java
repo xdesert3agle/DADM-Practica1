@@ -21,9 +21,9 @@ public class Pregunta9 extends AppCompatActivity {
         setContentView(R.layout.activity_pregunta9);
 
         // Recuperación del array de la pantalla anterior
-        final List<String> info = getIntent().getExtras().getStringArrayList("info");
+        final List<String> respuestas = getIntent().getExtras().getStringArrayList("info");
         TextView txt_Username = (TextView) findViewById(R.id.username);
-        txt_Username.setText(info.get(0));
+        txt_Username.setText(respuestas.get(0));
 
         Button btn_Next = (Button) findViewById(R.id.btn_Next);
         btn_Next.setOnClickListener(new View.OnClickListener() {
@@ -31,10 +31,10 @@ public class Pregunta9 extends AppCompatActivity {
             public void onClick(View view) {
                 ToggleButton boton = (ToggleButton) findViewById(R.id.respuesta);
 
-                info.set(9, boton.getText().toString());
+                respuestas.set(9, boton.getText().toString());
                 Intent intent = new Intent(Pregunta9.this, Pregunta10.class);
 
-                intent.putExtra("info", (ArrayList<String>) info);
+                intent.putExtra("info", (ArrayList<String>) respuestas);
                 startActivity(intent);
             }
         });

@@ -64,12 +64,14 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_Question7"
             android:textSize="18dp"/>
+
         <SeekBar
             android:id="@+id/barra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtEnunciado"
             android:paddingTop="8dp"/>
+
         <TextView
             android:id="@+id/minimo"
             android:layout_width="wrap_content"
@@ -78,6 +80,7 @@
             android:paddingLeft="11dp"
             android:textSize="18dp"
             android:text="0"/>
+
         <TextView
             android:id="@+id/estadoActual"
             android:layout_width="wrap_content"
@@ -86,6 +89,7 @@
             android:layout_centerHorizontal="true"
             android:textSize="18dp"
             android:text="Ningún modelo"/>
+
         <TextView
             android:id="@+id/maximo"
             android:layout_width="wrap_content"

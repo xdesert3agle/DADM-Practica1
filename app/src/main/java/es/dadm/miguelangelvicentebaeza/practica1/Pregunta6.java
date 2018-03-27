@@ -23,9 +23,9 @@ public class Pregunta6 extends AppCompatActivity {
         setContentView(R.layout.activity_pregunta6);
 
         // Recuperación del array de la pantalla anterior
-        final List<String> info = getIntent().getExtras().getStringArrayList("info");
+        final List<String> respuestas = getIntent().getExtras().getStringArrayList("info");
         TextView txt_Username = (TextView) findViewById(R.id.username);
-        txt_Username.setText(info.get(0));
+        txt_Username.setText(respuestas.get(0));
 
         final CheckBox opcion1 = (CheckBox) findViewById(R.id.respuesta1);
         final CheckBox opcion2 = (CheckBox) findViewById(R.id.respuesta2);
@@ -42,14 +42,14 @@ public class Pregunta6 extends AppCompatActivity {
                 }
                 else{
                     if (opcion2.isChecked() && opcion4.isChecked() && !opcion1.isChecked() && !opcion3.isChecked() && !opcion5.isChecked()){
-                        info.set(6, "1");
+                        respuestas.set(6, "1");
                     }
                     else {
-                        info.set(6, "0");
+                        respuestas.set(6, "0");
                     }
 
                     Intent intent = new Intent(Pregunta6.this, Pregunta7.class);
-                    intent.putExtra("info", (ArrayList<String>) info);
+                    intent.putExtra("info", (ArrayList<String>) respuestas);
 
                     startActivity(intent);
                 }
