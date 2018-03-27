@@ -16,6 +16,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.String.valueOf;
+
 public class Pregunta7 extends AppCompatActivity {
 
     @Override
@@ -37,8 +39,14 @@ public class Pregunta7 extends AppCompatActivity {
         barra.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                int value = min + (progress * step);
-                actual.setText(String.valueOf(value));
+                final int value = min + (progress * step);
+
+                if (value == 0){
+                    actual.setText("Ningún modelo");
+                }
+                else{
+                    actual.setText(valueOf(value) + " modelos");
+                }
             }
 
             @Override
@@ -56,7 +64,12 @@ public class Pregunta7 extends AppCompatActivity {
         btn_Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                info.set(7, actual.getText().toString());
 
+                Intent intent = new Intent(Pregunta7.this, Pregunta8.class);
+                intent.putExtra("info", (ArrayList<String>) info);
+
+                startActivity(intent);
             }
         });
 

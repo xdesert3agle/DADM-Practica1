@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Pregunta6 extends AppCompatActivity {
@@ -26,18 +27,18 @@ public class Pregunta6 extends AppCompatActivity {
         TextView txt_Username = (TextView) findViewById(R.id.username);
         txt_Username.setText(info.get(0));
 
+        final CheckBox opcion1 = (CheckBox) findViewById(R.id.respuesta1);
+        final CheckBox opcion2 = (CheckBox) findViewById(R.id.respuesta2);
+        final CheckBox opcion3 = (CheckBox) findViewById(R.id.respuesta3);
+        final CheckBox opcion4 = (CheckBox) findViewById(R.id.respuesta4);
+        final CheckBox opcion5 = (CheckBox) findViewById(R.id.respuesta5);
+
         Button btn_Next = (Button) findViewById(R.id.btn_Next);
         btn_Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CheckBox opcion1 = (CheckBox) findViewById(R.id.respuesta1);
-                CheckBox opcion2 = (CheckBox) findViewById(R.id.respuesta2);
-                CheckBox opcion3 = (CheckBox) findViewById(R.id.respuesta3);
-                CheckBox opcion4 = (CheckBox) findViewById(R.id.respuesta4);
-                CheckBox opcion5 = (CheckBox) findViewById(R.id.respuesta5);
-
                 if (!opcion1.isChecked() && !opcion2.isChecked() && !opcion3.isChecked() && !opcion4.isChecked() && !opcion5.isChecked()){
-                    Toast.makeText(Pregunta6.this, "Marca al menos una respuesta.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Pregunta6.this, "Debes marcar al menos una respuesta", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     if (opcion2.isChecked() && opcion4.isChecked() && !opcion1.isChecked() && !opcion3.isChecked() && !opcion5.isChecked()){

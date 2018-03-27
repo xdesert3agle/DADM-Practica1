@@ -1,9 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="es.dadm.miguelangelvicentebaeza.practica1.Pregunta10">
+    tools:context="es.dadm.miguelangelvicentebaeza.practica1.Pregunta9"
+    tools:ignore="ExtraText">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/persona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_below="@+id/avatar"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAlignment="center"
+            android:text="Miguel Ángel"/>
+
+        <TextView
+            android:id="@+id/txtPaso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avatar"
+            android:text="@string/txt_Step10"
+            android:textSize="18dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_below="@+id/txtPaso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:progress="100"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contPregunta"
+        android:layout_below="@+id/persona"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/txtEnunciado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_Question10"
+            android:textSize="18dp"/>
+
+        <NumberPicker
+            android:id="@+id/respuesta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEnunciado"
+            android:layout_centerHorizontal="true"
+            >
+        </NumberPicker>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/contButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_PrevQuestion"/>
+
+        <Button
+            android:id="@+id/btn_EndQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_EndQuiz"/>
+    </LinearLayout>
+</RelativeLayout>

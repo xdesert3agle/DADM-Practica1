@@ -32,6 +32,7 @@ public class Pregunta1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 RadioButton elegida = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
+
                 info.set(1, elegida.getText().toString());
 
                 Intent intent = new Intent(Pregunta1.this, Pregunta2.class);

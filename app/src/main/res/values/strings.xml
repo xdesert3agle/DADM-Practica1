@@ -72,6 +72,7 @@
     <string name="txt_Question9">9. La marca de coches Hyundai ha ofrecido un modelo con Android Auto, ¿verdadero o falso?</string>
 
     <string name="txt_Question10">10. ¿En qué año se comercializó el primer smartphone con Android?</string>
+    <string name="btn_EndQuiz">Terminar test</string>
 </resources>
 
 
