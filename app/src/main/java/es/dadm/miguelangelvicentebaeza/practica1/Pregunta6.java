@@ -16,7 +16,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Pregunta6 extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,12 +40,7 @@ public class Pregunta6 extends AppCompatActivity {
                     Toast.makeText(Pregunta6.this, "Debes marcar al menos una respuesta", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    if (opcion2.isChecked() && opcion4.isChecked() && !opcion1.isChecked() && !opcion3.isChecked() && !opcion5.isChecked()){
-                        respuestas.set(6, "1");
-                    }
-                    else {
-                        respuestas.set(6, "0");
-                    }
+                    respuestas.set(6, getChecked(opcion1, opcion2, opcion3, opcion4, opcion5));
 
                     Intent intent = new Intent(Pregunta6.this, Pregunta7.class);
                     intent.putExtra("info", (ArrayList<String>) respuestas);
@@ -64,5 +58,34 @@ public class Pregunta6 extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private String getChecked(CheckBox op1, CheckBox op2, CheckBox op3, CheckBox op4, CheckBox op5){
+        StringBuilder stringBuilder = new StringBuilder();
+
+        if (op1.isChecked()){
+            stringBuilder.append(op1.getText().toString()).append(", ");
+        }
+        if (op2.isChecked()){
+            stringBuilder.append(op2.getText().toString()).append(", ");
+        }
+        if (op3.isChecked()){
+            stringBuilder.append(op3.getText().toString()).append(", ");
+        }
+        if (op4.isChecked()){
+            stringBuilder.append(op4.getText().toString()).append(", ");
+        }
+        if (op5.isChecked()){
+            stringBuilder.append(op5.getText().toString());
+        }
+
+        if (!op5.isChecked()){
+            stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+            stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+        }
+
+        Log.d("String final", stringBuilder.toString());
+        Log.d("Longitud string", String.valueOf(stringBuilder.length()));
+        return stringBuilder.toString();
     }
 }

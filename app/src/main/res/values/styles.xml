@@ -1,11 +1,39 @@
 <resources>
+    <!-- Tema claro primera Activity. -->
+    <style name="MaterialLight_first_Activity" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/mlight_primary</item>
+        <item name="colorPrimaryDark">@color/mlight_primaryDark</item>
+        <item name="colorAccent">@color/mlight_accent</item>
+        <item name="actionBarStyle">@style/noShadowActionBar</item>
+    </style>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Tema claro resto de la aplicación. -->
+    <style name="MaterialLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/mlight_primary</item>
+        <item name="colorPrimaryDark">@color/mlight_primaryDark</item>
+        <item name="colorAccent">@color/mlight_accent</item>
+    </style>
+
+    <!-- Tema oscuro primera Activity. -->
+    <style name="MaterialDark_first_Activity" parent="Theme.AppCompat">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/mdark_primary</item>
+        <item name="colorPrimaryDark">@color/mdark_primaryDark</item>
+        <item name="colorAccent">@color/mdark_accent</item>
+        <item name="android:button">@color/mdark_buttonAccent</item>
+        <item name="actionBarStyle">@style/noShadowActionBar</item>
+    </style>
+
+    <style name="noShadowActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Tema oscuro resto de la aplicación. -->
+    <style name="MaterialDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/mdark_primary</item>
+        <item name="colorPrimaryDark">@color/mdark_primaryDark</item>
+        <item name="colorAccent">@color/mdark_accent</item>
+        <item name="android:button">@color/mdark_buttonAccent</item>
     </style>
 
 </resources>

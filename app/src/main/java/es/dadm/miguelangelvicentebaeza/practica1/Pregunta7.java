@@ -35,18 +35,13 @@ public class Pregunta7 extends AppCompatActivity {
         barra.setMax((max - min) / step);
 
         final TextView actual = (TextView) findViewById(R.id.estadoActual);
+        actual.setText("0 " + getResources().getString(R.string.models));
 
         barra.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 final int value = min + (progress * step);
-
-                if (value == 0){
-                    actual.setText("Ningún modelo");
-                }
-                else{
-                    actual.setText(valueOf(value) + " modelos");
-                }
+                actual.setText(valueOf(value) + " " + getResources().getString(R.string.models));
             }
 
             @Override

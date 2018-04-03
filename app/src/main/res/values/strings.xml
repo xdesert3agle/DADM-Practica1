@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android Quiz</string>
+    <string name="app_name" translatable="false">Android Quiz</string>
 
     <string name="btn_ConfirmName">Confirmar nombre</string>
     <string name="btn_NextQuestion">Siguiente</string>
@@ -8,7 +8,7 @@
     <string name="edit_NameHint">Nombre</string>
     <string name="edit_AnswerHint">Respuesta</string>
 
-    <string name="txt_Welcome">¡Bienvenido al test de Android! Escribe tu nombre para comenzar.</string>
+    <string name="txt_Welcome">¡Bienvenido al test de Android!\nEscribe tu nombre para comenzar.</string>
     <string name="txt_Step1">Pregunta 1</string>
     <string name="txt_Step2">Pregunta 2</string>
     <string name="txt_Step3">Pregunta 3</string>
@@ -21,8 +21,8 @@
     <string name="txt_Step10">Pregunta 10</string>
 
     <string name="txt_Question1">¿Cuál fue la primera versión de Android en traer un nombre de postre?</string>
-    <string name="radio_q1o1">Almond</string>
-    <string name="radio_q1o2">Cupcake</string>
+    <string name="radio_q1o1" translatable="false">Almond</string>
+    <string name="radio_q1o2" translatable="false">Cupcake</string>
     <string name="radio_q1o3">Brownie</string>
 
     <string name="txt_Question2">¿En qué año se hizo Google con Android Inc.?</string>
@@ -34,7 +34,7 @@
         <item>HTC Dream</item>
     </string-array>
 
-    <string name="txt_Question4">4. ¿Cuál de estas compañías no ha fabricado Nexus?</string>
+    <string name="txt_Question4">¿Cuál de estas compañías no ha fabricado Nexus?</string>
     <string-array name="question4_options">
         <item>Samsung</item>
         <item>HTC</item>
@@ -52,13 +52,13 @@
     <string name="txt_Question6">¿Cuál de los siguientes nombres NO son versiones de Android?</string>
     <string name="check_q6o1">Marshmallow</string>
     <string name="check_q6o2">Chupachup</string>
-    <string name="check_q6o3">Froyo</string>
+    <string name="check_q6o3" translatable="false">Froyo</string>
     <string name="check_q6o4">Lime Cake</string>
-    <string name="check_q6o5">Gingerbread</string>
+    <string name="check_q6o5" translatable="false">Gingerbread</string>
 
-    <string name="txt_Question7">7. ¿Cuántos teléfonos se han lanzado de la gama Nexus?</string>
+    <string name="txt_Question7">¿Cuántos teléfonos se han lanzado de la gama Nexus?</string>
 
-    <string name="txt_Question8">8. ¿Qué nombre tenía la versión 4.0 de Android?</string>
+    <string name="txt_Question8">¿Qué nombre tenía la versión 4.0 de Android?</string>
     <string-array name="question8_options">
         <item>Mashmallow</item>
         <item>Lollipop</item>
@@ -74,13 +74,15 @@
     <string name="txt_Question10">¿En qué año se comercializó el primer smartphone con Android?</string>
     <string name="btn_EndQuiz">Terminar test</string>
 
-    <string name="txt_FinalMsg">Has completado el test, username.</string>
-    <string name="txt_CorrectQuestions">288</string>
-    <string name="txt_TotalQuestions">/10</string>
-    <string name="txt_YourResultIs">Tu resultado es:</string>
+    <string name="txt_FinalMsg">Has completado el test.</string>
+    <string name="txt_CorrectQuestions" translatable="false">288</string>
+    <string name="txt_YourResultIs">Puntuación de username:</string>
     <string name="btn_StartAgain">Reintentar el test</string>
-    <string name="txt_CorrectHPlaceholder">99 CORRECTAS</string>
-    <string name="txt_IncorrectHPlaceholder">99 INCORRECTAS</string>
-    <string name="txt_CorrectsPlaceholder">Pregunta 1\nPregunta 2\nPregunta 3</string>
-    <string name="txt_IncorrectsPlaceholder">Pregunta 8\nPregunta 9\nPregunta 10</string>
+    <string name="txt_ToggleFalse">Falso</string>
+    <string name="txt_ToggleTrue">Verdadero</string>
+    <string name="txt_UserAnswerPlaceholder">Tu respuesta: Lorem ipsum</string>
+    <string name="aboutMenu">Información</string>
+    <string name="aboutMenuToast">Aplicación desarrollada por Miguel Ángel</string>
+    <string name="txt_CorrectAnswerPlaceholder">Respuesta correcta: Lorem ipsum</string>
+    <string name="models">modelos</string>
 </resources>

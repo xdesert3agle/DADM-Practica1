@@ -2,9 +2,21 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FF4081</color>-->
 
-    <!-- Custom colors -->
+    <!-- Material Dark -->
+    <color name="mdark_primary">#212121</color>
+    <color name="mdark_primaryDark">#000000</color>
+    <color name="mdark_accent">#424242</color>
+    <color name="mdark_buttonAccent">#424242</color>
+
+    <!-- Material Light -->
+    <color name="mlight_primary">#3F51B5</color>
+    <color name="mlight_primaryDark">#303F9F</color>
+    <color name="mlight_accent">#FF4081</color>
+
+    <!-- Material custom colors -->
     <color name="material_green">#17D326</color>
     <color name="material_red">#F44336</color>
+    <color name="material_white">#FFFFFF</color>
 </resources>

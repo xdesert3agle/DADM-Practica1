@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Quiz</string>
+    <string name="txt_Welcome">Welcome to the Android quiz!\nEnter your name to start.</string>
+    <string name="txt_Question5">What\'s the name of the Android version for wearables?</string>
+    <string name="txt_Question4">Which of this companies haven\'t manufactured a Nexus phone?</string>
+    <string name="txt_Question6">Which of this names are NOT existing Android versions?</string>
+    <string name="txt_Question3">What was the first Android smartphone?</string>
+    <string name="txt_Question1">What was the first Android version to have a dessert name?</string>
+    <string name="txt_Question7">How many Nexus phones exist?</string>
+    <string name="txt_Question10">In what year arrived the first Android smartphone?</string>
+    <string name="txt_Question2">In what year did Google buy Android Inc.?</string>
+    <string name="txt_Question8">What\'s the name of Android 4.0?</string>
+    <string name="btn_PrevQuestion">Previous</string>
+    <string name="aboutMenuToast">App developed by Miguel Ángel</string>
+    <string name="btn_ConfirmName">Confirm name</string>
+    <string name="txt_ToggleFalse">False</string>
+    <string name="btn_NextQuestion">Next</string>
+    <string name="edit_NameHint">Name</string>
+    <string name="edit_AnswerHint">Answer</string>
+    <string name="txt_Step1">Question 1</string>
+    <string name="txt_Step2">Question 2</string>
+    <string name="txt_Step3">Question 3</string>
+    <string name="txt_Step4">Question 4</string>
+    <string name="txt_Step5">Question 5</string>
+    <string name="txt_Step6">Question 6</string>
+    <string name="txt_Step7">Question 7</string>
+    <string name="txt_Step8">Question 8</string>
+    <string name="txt_Step9">Question 9</string>
+    <string name="txt_Step10">Question 10</string>
+    <string name="txt_Question9">The car brand, Hyundai, has an Android based car. True or false?</string>
+    <string name="btn_EndQuiz">End test</string>
+    <string name="txt_FinalMsg">You have completed the test</string>
+    <string name="txt_YourResultIs">username\'s score:</string>
+    <string name="btn_StartAgain">Retry</string>
+    <string name="txt_ToggleTrue">True</string>
+    <string name="txt_UserAnswerPlaceholder">Your answer: Lorem ipsum</string>
+    <string name="txt_CorrectAnswerPlaceholder">Correct answer: Lorem ipsum</string>
+    <string name="aboutMenu">Info</string>
+    <string name="models">models</string>
+</resources>

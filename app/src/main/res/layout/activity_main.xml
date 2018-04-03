@@ -4,37 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="es.dadm.miguelangelvicentebaeza.practica1.MainActivity">
 
-    <TextView
-        android:id="@+id/welcome_msg"
-        android:layout_centerHorizontal="true"
+    <RelativeLayout
+        android:id="@+id/txt_Welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:text="@string/txt_Welcome"/>
+        android:background="?android:colorPrimary">
+
+        <TextView
+            android:id="@+id/welcome_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:text="@string/txt_Welcome"
+            android:textColor="@color/material_white"/>
+    </RelativeLayout>
 
     <EditText
-        android:layout_below="@id/welcome_msg"
-        android:layout_margin="16dp"
         android:id="@+id/txt_name"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/txt_Welcome"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/edit_NameHint"/>
 
     <ImageView
         android:id="@+id/img_android"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_below="@+id/txt_name"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/txt_name"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        app:srcCompat="@drawable/androidlogo"/>
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/androidlogo" />
 
     <LinearLayout
         android:id="@+id/contButtons"

@@ -6,135 +6,615 @@
     tools:context="es.dadm.miguelangelvicentebaeza.practica1.Pregunta9"
     tools:ignore="ExtraText">
 
-    <TextView
-        android:id="@+id/txt_FinalMsg"
+    <!-- Mensaje con el score del usuario-->
+    <RelativeLayout
+        android:id="@+id/cont_FinalMsg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:textAlignment="center"
-        android:text="@string/txt_FinalMsg"
-        android:textSize="18dp"/>
-
-    <TextView
-        android:id="@+id/txt_YourResultIs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_FinalMsg"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:textAlignment="center"
-        android:text="@string/txt_YourResultIs"
-        android:textSize="18dp"/>
-
-    <LinearLayout
-        android:id="@+id/txt_Score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_YourResultIs"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?android:colorPrimary">
 
         <TextView
-            android:id="@+id/txt_CorrectQuestions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_CorrectQuestions"
-            android:textSize="52dp"
-            android:textColor="@color/colorPrimary"/>
-
-        <TextView
-            android:id="@+id/txt_TotalQuestions"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/txt_TotalQuestions"
-            android:textSize="52dp"
-            android:textColor="@color/colorPrimary"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contResults"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_Score"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
-
-        <RelativeLayout
-            android:id="@+id/contCorrects"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/txt_CorrectsH"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginRight="13dp"
-                android:textAlignment="center"
-                android:text="@string/txt_CorrectHPlaceholder"
-                android:textStyle="bold"
-                android:textColor="@color/material_green"
-                android:textSize="18dp"/>
-
-            <TextView
-                android:id="@+id/txt_Corrects"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_CorrectsH"
-                android:text="@string/txt_CorrectsPlaceholder"
-                android:textColor="@color/material_green"
-                android:layout_centerHorizontal="true"
-                android:textSize="16dp"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/contIncorrects"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/txt_IncorrectsH"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="@string/txt_IncorrectHPlaceholder"
-                android:textAlignment="center"
-                android:textColor="@color/material_red"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txt_Incorrects"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_IncorrectsH"
-                android:layout_centerHorizontal="true"
-                android:text="@string/txt_IncorrectsPlaceholder"
-                android:textAlignment="center"
-                android:textColor="@color/material_red"
-                android:textSize="16dp" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:padding="16dp">
-
-        <Button
-            android:id="@+id/btn_StartAgain"
+            android:id="@+id/txt_FinalMsg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/btn_StartAgain"/>
-    </LinearLayout>
-</RelativeLayout>
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_FinalMsg"
+            android:textAlignment="center"
+            android:textColor="@color/material_white"
+            android:textSize="18dp" />
 
+        <TextView
+            android:id="@+id/txt_YourResultIs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_FinalMsg"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_YourResultIs"
+            android:textAlignment="center"
+            android:textColor="@color/material_white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txt_Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_YourResultIs"
+            android:layout_centerHorizontal="true"
+            android:text="@string/txt_CorrectQuestions"
+            android:textColor="@color/material_white"
+            android:textSize="72dp" />
+    </RelativeLayout>
+
+    <!-- Parte de abajo con las respuesta -->
+    <ScrollView
+        android:id="@+id/swRespuestas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cont_FinalMsg">
+
+        <RelativeLayout
+            android:id="@+id/contResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cont_FinalMsg"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/contQuestion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="32dp"
+                android:layout_below="@+id/txt_Correction">
+
+                <TextView
+                    android:id="@+id/txt_Step1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txt_YourResultIs"
+                    android:text="@string/txt_Step1"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step1"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question1"
+                    android:textSize="18dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_Q1UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question1"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q1CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q1UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion1"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spacer1"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_Step2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step2"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txt_Question2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step2"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question2"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/txt_Q2UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question2"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q2CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q2UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion2"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spacer2"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_Step3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step3"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step3"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question3"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q3UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question3"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q3CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q3UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion4"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spacer3"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_Step4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step4"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step4"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question4"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q4UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question4"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q4CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q4UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion3"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contQuestion4"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_Step5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step5"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step5"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question5"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q5UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question5"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q5CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q5UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion5"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contQuestion5"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_Step6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step6"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step6"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question6"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q6UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question6"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q6CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q6UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion6"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contQuestion6"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_Step7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step7"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step7"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question7"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q7UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question7"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q7CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q7UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion7"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contQuestion7"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_Step8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step8"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step8"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question8"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q8UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question8"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q8CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q8UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion8"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contQuestion8"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_Step9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step9"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step9"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question9"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q9UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question9"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q9CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q9UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/spacer9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contQuestion9"
+                android:background="#808080"/>
+
+            <RelativeLayout
+                android:id="@+id/contQuestion10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contQuestion9"
+                android:paddingTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp">
+
+                <TextView
+                    android:id="@+id/txt_Step10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_Step10"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Question10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Step10"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Question10"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q10UserAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Question10"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_UserAnswerPlaceholder"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_Q10CorrectAns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_Q10UserAns"
+                    android:text="@string/txt_CorrectAnswerPlaceholder"
+                    android:textColor="@color/material_green"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/contButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="16dp"
+                android:layout_below="@+id/contQuestion10">
+
+                <Button
+                    android:id="@+id/btn_StartAgain"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_StartAgain" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

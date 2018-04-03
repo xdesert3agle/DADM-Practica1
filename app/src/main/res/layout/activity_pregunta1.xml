@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="?android:colorPrimary">
 
         <ImageView
             android:id="@+id/avatar"
@@ -29,6 +30,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:textAlignment="center"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/material_white"
+            android:textSize="15dp"
+            android:padding="2dp"
             android:text="Miguel Ángel"/>
 
         <TextView
@@ -37,6 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/avatar"
             android:text="@string/txt_Step1"
+            android:textColor="@color/material_white"
+            android:fontFamily="sans-serif-medium"
             android:textSize="18dp"/>
 
         <ProgressBar
@@ -44,8 +51,9 @@
             android:layout_below="@+id/txtPaso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
-            android:progressBackgroundTint="@color/colorPrimaryDark"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+            android:progressBackgroundTint="?android:colorPrimary"
+            android:paddingBottom="8dp"
             android:progress="10"/>
     </RelativeLayout>
 
@@ -54,7 +62,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/contPregunta"
         android:layout_below="@+id/persona"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp">
 
@@ -102,13 +110,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:padding="16dp">
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp">
 
         <Button
             android:id="@+id/btn_Next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/btn_NextQuestion"/>
+            android:text="@string/btn_NextQuestion"
+            style="@style/Widget.AppCompat.Button.Colored"/>
     </LinearLayout>
 </RelativeLayout>
